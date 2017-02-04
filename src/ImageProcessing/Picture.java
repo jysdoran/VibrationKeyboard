@@ -12,7 +12,7 @@ public class Picture {
     private int[][] ImageToPixelRectangles() {
         final int width = image.getWidth();
         final int height = image.getHeight();
-        final int xWidth = (int) Math.floor(width / 20);
+        final int xWidth = (int) Math.floor(width / 15);
         final int yHeight = (int) Math.floor(height / 6);
 
         int[][] pixelArray = new int[xWidth][yHeight];
