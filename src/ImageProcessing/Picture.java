@@ -3,24 +3,29 @@ package ImageProcessing;
 import java.awt.image.BufferedImage;
 
 public class Picture {
-    private final BufferedImage image;
-    public Picture(BufferedImage image) {
+    private static BufferedImage image;
+    private final int widthInCM;
+    private final int heightInCM;
+    private int width = image.getWidth();
+    private int height = image.getHeight();
+
+    public Picture(BufferedImage image, int widthInCM, int heightInCM) {
         this.image = image;
-
+        this.widthInCM = widthInCM;
+        this.heightInCM = heightInCM;
     }
 
-    private int[][] ImageToPixelRectangles() {
-        final int width = image.getWidth();
-        final int height = image.getHeight();
-        final int xWidth = (int) Math.floor(width / 15);
-        final int yHeight = (int) Math.floor(height / 6);
+    private int pixelRatioW  = image.getWidth() / width;
+    private int pixelRatioH = image.getHeight() / height;
 
-        int[][] pixelArray = new int[xWidth][yHeight];
-        for (int i = 0; i < xWidth; i++) {
-            for (int j = 0; j < yHeight; j++) {
-            }
-        }
-
-    return null;
+    private Point givePixel (Point point) {
+        return Point(pixelRatioW * widthInCM / width, pixelRatioH * heightInCM / height);
     }
+
+
+
+
+
+
+
 }

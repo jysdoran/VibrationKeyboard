@@ -1,15 +1,14 @@
-//will read the area of the image that is fed into it - this will be in the form of a point and a distance
+package ImageProcessing;//will read the area of the image that is fed into it - this will be in the form of a point and a distance
 // and we will look at that distance around it (The shape or area we look at is open to change).
 // Class will also contain a set of  methods to create and display picture objects.
 
-import java.awt.Graphics;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import javax.imageio.ImageIO;
 
 public class Picture_Reader {
 
@@ -38,7 +37,7 @@ public class Picture_Reader {
 //     returns a Picture representing the image at the specified URL, or null if
 //     loading failed for any reason.
 
-      public static Picture loadPicture(String locationString) {
+    public static Picture loadPicture(String locationString) {
 
         final BufferedImage img;
         final BufferedImage origImage;
@@ -80,3 +79,4 @@ public class Picture_Reader {
         g.drawImage(origImage, 0, 0, null);
         return new Picture(img);
     }
+}
