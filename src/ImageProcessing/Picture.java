@@ -11,7 +11,7 @@ public class Picture {
     private int width = image.getWidth();
     private int height = image.getHeight();
 
-    public Picture(BufferedImage image, int widthInCM, int heightInCM) {
+    public Picture(BufferedImage image) {
         this.image = image;
         this.widthInCM = widthInCM;
         this.heightInCM = heightInCM;
