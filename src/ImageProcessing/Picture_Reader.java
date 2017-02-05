@@ -2,6 +2,7 @@
 // and we will look at that distance around it (The shape or area we look at is open to change).
 // Class will also contain a set of  methods to create and display picture objects.
 
+
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
