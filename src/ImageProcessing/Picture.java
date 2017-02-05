@@ -1,5 +1,7 @@
 package ImageProcessing;
 
+import MathsUtils.Point;
+
 import java.awt.image.BufferedImage;
 
 public class Picture {
@@ -15,11 +17,11 @@ public class Picture {
         this.heightInCM = heightInCM;
     }
 
-    private int pixelRatioW  = image.getWidth() / width;
-    private int pixelRatioH = image.getHeight() / height;
+    private double pixelRatioW  = image.getWidth() / width;
+    private double pixelRatioH = image.getHeight() / height;
 
     private Point givePixel (Point point) {
-        return Point(pixelRatioW * widthInCM / width, pixelRatioH * heightInCM / height);
+        return new Point(pixelRatioW * widthInCM / width, pixelRatioH * heightInCM / height);
     }
 
 
